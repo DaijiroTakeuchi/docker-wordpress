@@ -1,0 +1,73 @@
+$color-gnav: #000;
+$color-bg-hover: #9fb7d4;
+$color-font-hover: orange;
+
+.c-gnav-wrapper {
+  background-color: $color-gnav;
+}
+
+.c-gnav {
+  background-color: $color-gnav;
+  margin: 0 auto;
+  width: $width-main-small;
+  @include mq-pc-wide {
+    width: $width-main-midium;
+  }
+  @include mq-sp {
+    width: 100%;
+  }
+}
+.c-gnav > ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.c-gnav > ul li {
+  display: block;
+  position: relative;
+  width: 25%;
+  padding: 2px 0;
+}
+.c-gnav > ul li a {
+  display: block;
+  padding: 10px 0;
+  color: white;
+}
+/*サブメニュー*/
+.c-gnav > ul .sub-menu {
+  display: none;
+  position: absolute;
+  margin-left: 0;
+  width: 100%;
+  padding-left: 0;
+  background-color: $color-gnav;
+  z-index: 99;
+}
+.c-gnav > ul .sub-menu li {
+  width: auto;
+}
+.c-gnav > ul .sub-menu a {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+/*サブメニューのサブメニュー*/
+.c-gnav > ul .sub-menu ul {
+  top: -50px;
+  left: 240px;
+  position: relative;
+}
+.c-gnav a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+.c-gnav a:hover {
+  background-color: #333;
+  transition: all 0.3s ease 0s;
+}
+.c-gnav a:hover > ul {
+  display: block;
+}

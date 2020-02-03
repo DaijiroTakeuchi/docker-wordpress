@@ -1,0 +1,30 @@
+/*   
+Theme Name: template
+*/
+
+@import "_imports/Foundation/base.scss";
+@import "_imports/Foundation/mixin.scss";
+@import "_imports/Foundation/reset.scss";
+@import "_imports/Foundation/variable.scss";
+@import "_imports/Foundation/normalize.scss";
+@import "_imports/Foundation/add_normalize.scss";
+
+@import "_imports/Layout/l-footer.scss";
+@import "_imports/Layout/l-header.scss";
+@import "_imports/Layout/l-main.scss";
+@import "_imports/Layout/l-post.scss";
+@import "_imports/Layout/l-sidebar.scss";
+
+@import "_imports/Object/Component/c-button.scss";
+@import "_imports/Object/Component/c-grid.scss";
+@import "_imports/Object/Component/c-gnav.scss";
+
+@import "_imports/Object/Project/p-card.scss";
+@import "_imports/Object/Project/p-profile.scss";
+
+@import "_imports/Object/Theme/t-blue.scss";
+
+@import "_imports/Object/Utility/u-color.scss";
+@import "_imports/Object/Utility/u-margin.scss";
+@import "_imports/Object/Utility/u-padding.scss";
+@import "_imports/Object/Utility/u-utility.scss";

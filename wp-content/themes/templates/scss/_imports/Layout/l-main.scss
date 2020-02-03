@@ -1,0 +1,37 @@
+@import "../Foundation/variable.scss";
+@import "../Foundation/mixin.scss";
+
+.l-background {
+  background: #f7f7f7;
+}
+
+.l-container {
+  margin: 0 auto;
+  width: $width-main-small;
+  @include mq-pc-wide {
+    width: $width-main-midium;
+  }
+  @include mq-sp {
+    width: 100%;
+  }
+
+  &__frame {
+    padding: 30px 0;
+  }
+}
+
+.l-news {
+  display: flex;
+  justify-content: space-between;
+  &__list {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+  }
+}
+
+.l-main {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
