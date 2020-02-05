@@ -8,6 +8,7 @@ $color-font-hover: orange;
 
 .c-gnav {
   background-color: $color-gnav;
+
   margin: 0 auto;
   width: $width-main-small;
   @include mq-pc-wide {

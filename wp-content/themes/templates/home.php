@@ -4,13 +4,21 @@
         <div class="l-container__frame">
             <ul class="l-news">
                 <li class="l-news__list">
-                    <a href="<?php echo get_permalink( 17 ); ?>">hoge</a>
+                    <div class="l-news__list_image"
+                        style="background-image: url('wp-content/themes/templates/images/test.jpg');"></div>
+                    <a class="l-news__list_link" href="<?php echo get_permalink( 17 ); ?>">hoge</a>
                 </li>
                 <li class="l-news__list">
-                    <a href="<?php echo get_permalink( 17 ); ?>">hoge</a>
+                    <div class="l-news__list_image"
+                        style="background-image: url('wp-content/themes/templates/images/test.jpg');"></div>
+                    <?php echo wp_get_attachment_image( 1 ); ?>
+                    <a class="l-news__list_link" href="<?php echo get_permalink( 17 ); ?>">hoge</a>
                 </li>
                 <li class="l-news__list">
-                    <a href="<?php echo get_permalink( 5 ); ?>">hoge</a>
+                    <div class="l-news__list_image"
+                        style="background-image: url('wp-content/themes/templates/images/test.jpg');"></div>
+                    <?php echo wp_get_attachment_image( 1 ); ?>
+                    <a class="l-news__list_link" href="<?php echo get_permalink( 5 ); ?>">hoge</a>
                 </li>
             </ul>
 

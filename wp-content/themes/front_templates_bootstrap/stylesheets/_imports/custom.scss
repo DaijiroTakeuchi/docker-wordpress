@@ -1,0 +1,11 @@
+// @import './mixins/'
+
+.hoge {
+  font-size: 10px;
+}
+
+@include media-breakpoint-up(md) {
+  .hoge {
+    font-size: 50px;
+  }
+}
