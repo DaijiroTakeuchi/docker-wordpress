@@ -1,0 +1,28 @@
+.l-post {
+  width: 640px;
+}
+
+.l-post-flame {
+  background-color: #fff;
+  padding: 40px 0;
+  &__header {
+    text-align: center;
+    &_date {
+    }
+    &_heading {
+      font-size: 1.5em;
+      line-height: 2;
+      margin: 1em 0;
+    }
+    &_category {
+      font-size: 0.8em;
+    }
+  }
+
+  &__content {
+    &_image {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}

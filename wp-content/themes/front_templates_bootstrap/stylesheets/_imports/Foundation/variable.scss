@@ -1,0 +1,44 @@
+// color
+$color-black: #000;
+$color-gray3: #333;
+$color-gray6: #666;
+$color-gray9: #999;
+$color-grayC: #ccc;
+$color-grayD: #dedede;
+$color-grayE: #eee;
+$color-grayF: #f2f2f2;
+$color-white: #fff;
+
+$color-navy: #003f66;
+$color-skyblue: #0086d9;
+$color-lightblue: #cfdde6;
+$color-darkblue: #00629d;
+
+// width
+$width-main: 1200px;
+$width-main-midium: 980px;
+$width-main-small: 768px;
+
+$width-break-pc: 1025px;
+$width-break-tab-max: 1024px;
+$width-break-tab: 768px;
+$width-break-sp: 767px;
+$width-break-sp-large: 540px;
+$width-break-sp-small: 374px;
+
+// font
+$font-sans-serif: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック",
+  "Yu Gothic", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ",
+  Meiryo, sans-serif;
+$font-serif: "游明朝", YuMincho, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
+  "ＭＳ Ｐ明朝", "MS PMincho", serif;
+$font-en: "Open Sans", "Arial", sans-serif;
+$font-mix: "Open Sans", "Arial", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN",
+  "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+
+$font-sans-serif-win: "Noto Sans JP", "メイリオ", Meiryo, "ヒラギノ角ゴ ProN",
+  "Hiragino Kaku Gothic ProN", sans-serif;
+$font-serif-win: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3",
+  "Hiragino Mincho Pro", serif;
+$font-mix-win: "Open Sans", "Arial", "メイリオ", Meiryo, "ヒラギノ角ゴ ProN",
+  "Hiragino Kaku Gothic ProN", sans-serif;

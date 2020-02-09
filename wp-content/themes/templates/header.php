@@ -20,7 +20,7 @@
         <div class="l-container">
             <header>
                 <h1>
-                    <a href="/">headerですaが</a>
+                    <a href="/">DaijiroBlog</a>
                 </h1>
             </header>
         </div>
