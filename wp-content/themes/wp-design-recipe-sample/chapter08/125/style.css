@@ -1,0 +1,674 @@
+/*
+Theme Name: 125 投稿作者ページにリンクしたい
+Theme URI: https://studio947.net
+Author: Sukeharu Kano
+Author URI: https://studio947.net
+Description: 125
+Version: 1.0
+*/
+@charset "UTF-8";
+
+/* reset */
+html {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+html *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ebe2cd;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all .3s;
+    color: #823d00;
+}
+a:hover {
+    color: #ef6d26;
+}
+
+/* container ========== */
+.container {
+    margin: 0 8px;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+@media screen and (min-width: 1018px) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+/* header ========== */
+.main-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #FFF;
+    position: relative;
+}
+@media screen and (min-width: 768px) {
+    .main-header {
+        padding-bottom: 8px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+@media screen and (min-width: 768px) {
+    .logo {
+        width: 200px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.logo-img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+/* #searchform 検索フィールド */
+#searchform .btn {
+    line-height: 24px;
+    border-width: 0;
+    color: #f0264b;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#searchform .btn span {
+    display: none;
+}
+.input-group {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 80px;
+    border-radius: 18px;
+    padding: 5px 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3) inset;
+    width: 200px;
+}
+@media screen and (min-width: 768px) {
+    .input-group {
+        width: 250px;
+    }
+}
+@media screen and (min-width: 375px) {
+    .input-group {
+        margin: 0 auto;
+    }
+}
+
+.form-control {
+    padding: 0 0 0 10px;
+    line-height: 24px;
+    border-width: 0;
+    width: 150px;
+}
+@media screen and (min-width: 768px) {
+    .form-control {
+        width: 200px;
+    }
+}
+
+.form-control:focus {
+    outline: none;
+}
+
+
+/* ナビゲーション ========== */
+.navigation {
+    position: relative;
+}
+@media screen and (min-width: 768px) {
+    .navigation {
+        position: relative;
+    }
+}
+
+.main-nav-open {
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    background-color: #823d00;
+    border-radius: 5px 5px 0 0;
+    color: #FFF;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .main-nav-open {
+        display: none;
+    }
+}
+
+.main-nav {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    z-index: 10;
+}
+@media screen and (min-width: 768px) {
+    .main-nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        left: auto;
+        top: auto;
+    }
+}
+
+.main-nav.active {
+    display: block;
+}
+
+.main-nav li a {
+    display: block;
+    padding: 8px 20px;
+    border-bottom: 1px solid #F2F2F2;
+    background-color: #FFF;
+    font-size: .9em;
+}
+@media screen and (min-width: 768px) {
+    .main-nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        display: inline-block;
+        padding: 0 0 0 8px;
+    }
+    .main-nav li a {
+        padding: 3px 12px;
+        line-height: 18px;
+        vertical-align: middle;
+        border-radius: 12px;
+        border-bottom-width: 0;
+    }
+    .main-nav li a:hover {
+        background-color: #823d00;
+        color: #FFF;
+    }
+    .main-nav li a.selected {
+        background-color: #f0264b;
+        color: #FFF;
+    }
+}
+
+/* primary - frontpage ========== */
+@media screen and (min-width: 768px) {
+    .hero {
+        position: relative;
+    }
+    .hero::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        content: "";
+        background: url(images/hero-curve.png) no-repeat center bottom/contain;
+    }
+}
+
+.home .feature {
+    margin: 30px 0;
+}
+@media screen and (min-width: 768px) {
+    .home .feature {
+        display: flex;
+        position: relative;
+        top: -60px;
+        margin: 0 0 -30px;
+    }
+}
+
+.home .feature-item {
+    margin-bottom: 30px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgba(0,0,0,.2);
+    background-color: #FFF;
+    position: relative;
+    overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+    .home .feature-item {
+        padding: 5px;
+        margin: 0 15px;
+        flex: 1 1 350px;
+        border-radius: 8px;
+        box-shadow: 0 2px 7px rgba(0,0,0,.2);
+        background-color: #f9f6ef;
+        transition: all .3s;
+    }
+    .home .feature-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        background-color: #FFF;
+    }
+    .home .feature-item:first-child {
+        margin-left: 0;
+    }
+    .home .feature-item:last-child {
+        margin-right: 0;
+    }
+}
+
+.home .feature-item::after {
+    width: 50px;
+    height: 50px;
+    background: url(images/featured.png) no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home .feature-figure {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.home .feature h3 {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.home .feature p {
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+/* .catchcopy */
+.catchcopy {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 30px 0 50px;
+    font-weight: bold;
+}
+
+/* news */
+.news{
+    margin: 0 15px 30px;
+}
+@media screen and (min-width: 768px) {
+    .news {
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.1);
+        background-color: #FFF;
+        padding: 40px 54px;
+        margin: 0 0 30px;
+    }
+}
+
+.news h2 {
+    margin: 0;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #bf8464;
+}
+@media screen and (min-width: 768px) {
+    .news h2 {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #EEE;
+    }
+}
+
+.news ul {
+    margin: 0;
+    padding: 15px 0 0;
+    list-style: none;
+}
+@media screen and (min-width: 768px) {
+    .news ul {
+        display: flex;
+    }
+}
+
+.news li {
+    font-size: 14px;
+    padding: 15px 0;
+}
+@media screen and (min-width: 768px) {
+    .news li {
+        padding: 0 20px;
+        flex: 1 1 270px;
+        border-right: 1px solid #EEE;
+    }
+    .news li:first-child {
+        padding-left: 0;
+    }
+    .news li:last-child {
+        padding-right: 0;
+        border-right-width: 0;
+    }
+}
+
+.news-date {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #f0264b;
+}
+
+/* primary - single, archive, page ========== */
+.breadcrumb {
+    margin-top: 30px;
+    font-size: .9em;
+}
+
+.archive-loop {
+    margin-top: 30px;
+}
+
+.archive-item {
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    background-color: #FFF;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+    .archive-item {
+        padding: 30px;
+    }
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-block h1 {
+    font-size: 1.2em;
+    margin: 0 0 .5em 0;
+}
+
+.title-block .pubdate {
+    font-size: 0.825rem;
+    font-weight: 300;
+    color: #f0264b;
+}
+
+.title-block .tag-item {
+    background-color: #F2F2F2;
+    display: inline-block;
+    font-size: 0.825em;
+    line-height: 2;
+    padding: 0 8px;
+    margin: 0 5px 5px 0;
+    border-radius: 3px;
+}
+
+.post-thumb {
+    min-width: 70px;/* max: 150px; */
+    width: 70px;
+    height: 70px;
+    margin-left: .5em;
+    border-radius: 5px;
+    overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+    .post-thumb {
+        min-width: 100px;/* max: 150px; */
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.excerpt {
+    margin-top: 1em;
+}
+
+.excerpt > *:last-child {
+    margin-bottom: 0;
+}
+
+.single .primary main,
+.page .primary main {
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .single .primary .container-flex,
+    .archive .primary .container-flex {
+        display: flex;
+    }
+    .single .primary main,
+    .archive .primary main {
+        flex: 1 1 auto;
+        margin-right: 2em;
+    }
+    .primary .sidebar {
+        flex: 0 0 18em;
+    }
+}
+
+/* archive pagination */
+.nav-links {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-numbers {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 3px;
+    background-color: #FFF;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 500;
+}
+
+a.page-numbers:hover {
+    background-color: #ef6d26;
+    color: #FFF;
+}
+
+.page-numbers.current {
+    background-color: #f0264b;
+    color: #FFF;
+}
+
+.content-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    background-color: #FFF;
+    padding: 20px;
+    /* margin-top: 30px; */
+    position: relative;
+}
+@media screen and (min-width: 768px) {
+    .content-wrapper {
+        padding: 30px;
+    }
+}
+
+.content {
+    margin-top: 30px;
+}
+
+.content .photo {
+    margin-bottom: 30px;
+}
+
+.content > *:last-child {
+    margin-bottom: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.pagination span {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .pagination span {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
+.pagination > div {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 3px;
+    background-color: #FFF;
+}
+@media screen and (min-width: 768px) {
+    .pagination > div {
+        display: block;
+        width: auto;
+        height: auto;0
+        margin: 0;
+        background-color: transparent;
+    }
+}
+
+/* page（固定ページ） */
+.page .content-header {
+    display: block;
+}
+
+/* sidebar ========== */
+.sidebar {
+    font-size: .9em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+    .sidebar {
+        margin-bottom: 0;
+    }
+}
+
+.sidebar-block {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: #62532f;
+    background-color: #dad0b8;
+}
+.sidebar-block > *:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-block h3 {
+    margin: 0 0 .5em 0;
+    color: #3b3015;
+}
+
+.sidebar-block ul.fa-ul {
+    margin-left: 1.3em;
+}
+
+.sidebar-block li {
+    padding: .5em 0;
+    border-bottom: 1px solid #b0a792;
+}
+
+.sidebar-block li:last-child {
+    border-bottom-width: 0;
+}
+
+/* footer ========== */
+.page-footer {
+    background-color: #823d00;
+    color: #FFF;
+    margin-top: 30px;
+    padding: 20px 0 30px;
+    font-size: .8em;
+}
+@media screen and (min-width: 768px) {
+    .page-footer {
+        padding: 30px 0;
+    }
+}
+
+.footer-nav ul {
+    margin: 0 0 20px 20px;
+}
+@media screen and (min-width: 768px) {
+    .footer-nav ul {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer-nav li {
+    margin-bottom: .5em;
+}
+@media screen and (min-width: 768px) {
+    .footer-nav li {
+        margin: 0 7px;
+    }
+}
+
+.footer-nav li a {
+    color: #e7c8ad;
+}
+
+.footer-nav li a:hover {
+    color: #FFF;
+}
+
+.copyright {
+    text-align: center;
+}

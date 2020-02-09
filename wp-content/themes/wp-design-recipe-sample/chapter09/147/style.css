@@ -1,0 +1,372 @@
+/*
+Theme Name: 147 ページネーションの表示をカスタマイズしたい
+Theme URI: https://studio947.net
+Author: Sukeharu Kano
+Author URI: https://studio947.net
+Description: 147
+Version: 1.0
+*/
+@charset "UTF-8";
+
+/* reset */
+html {
+    font-size: 16px;
+}
+
+html *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #F5F5F5;
+    color: #444;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #099cef;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #f00a9c;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* container */
+.container {
+    margin: 0 8px;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+@media screen and (min-width: 1018px) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+/* header */
+.main-header {
+    position: relative;
+    padding: 10px 0;
+    background: #252525;
+}
+@media screen and (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo-img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+/* ナビゲーション */
+.container.navigation {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+}
+
+.main-nav {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 10;
+    margin: 0 auto;
+    max-width: 1000px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+}
+@media screen and (min-width: 768px) {
+    .main-nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        left: auto;
+        top: auto;
+
+        display: flex;
+        justify-content: space-between;
+        background: transparent;
+    }
+    .main-nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+    }
+    .main-nav ul li {
+        display: block;
+        margin-left: 50px;
+    }
+}
+
+/* ナビゲーション - ハンバーガーメニュー */
+.main-nav-open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #00629a;
+    color: #FFF;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .main-nav-open {
+        display: none;
+    }
+}
+
+.main-nav.close {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .main-nav.close {
+        display: block !important;
+    }
+}
+
+.main-nav li a {
+    display: block;
+    padding: 8px 20px;
+    border-bottom: 1px solid #F2F2F2;
+    font-size: .9em;
+    color: #099cef;
+}
+@media screen and (min-width: 768px) {
+    .main-nav li a {
+        line-height: 2;
+        display: block;
+        border-bottom: none;
+        padding: 5px 0 0;
+    }
+    .main-nav li a:hover {
+        color: #f00a9c;
+    }
+}
+
+/* primary */
+/* primary - front page */
+
+/* primary - single, archive */
+.content-wrapper {
+    border-radius: 3px;
+    background-color: #FFF;
+    padding: 20px;
+    margin: 30px 0;
+    position: relative;
+}
+@media screen and (min-width: 768px) {
+    .content-wrapper {
+        padding: 30px;
+    }
+}
+
+.content-header {
+    padding-top: 30px;
+    border-top: 1px solid #DDD;
+    margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+    .content-header {
+        margin-top: 60px;
+    }
+}
+
+.content-header:first-child {
+    padding-top: 0;
+    border-top-width: 0;
+    margin-top: 0;
+}
+
+.title-block {
+    margin-top: 1rem;
+}
+
+.title-block h1 {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.title-block .pubdate {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+}
+
+.title-block .tag {
+    font-size: 0.7em;
+    margin: .5em 0;
+}
+
+.title-block .tag > span {
+    background-color: #099cef;
+    color: #FFF;
+    display: inline-block;
+    line-height: 1.8;
+    padding: 0 8px;
+    margin: 0 5px 5px 0;
+    border-radius: 3px;
+}
+
+.content {
+    margin-top: 30px;
+}
+
+.content .photo {
+    margin-bottom: 30px;
+}
+
+.content-wrapper .city {
+    border-top-width: 0;
+}
+
+.content-wrapper .info {
+    border-bottom: 1px dashed #DDD;
+    padding-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+    .single .primary .container,
+    .archive .primary .container {
+        display: flex;
+    }
+    .single .primary main,
+    .archive .primary main {
+        flex: 1 1 auto;
+        margin-right: 1em;
+    }
+    .primary .sidebar {
+        flex: 0 0 22.5rem;
+    }
+}
+
+/* ページネーション（共通） */
+.nav-links {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.page-numbers {
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 0 3px;
+    background-color: #F2F2F2;
+}
+
+a.page-numbers:hover {
+    background-color: #f00a9c;
+    color: #FFF;
+}
+
+.page-numbers.current {
+    background-color: #f00a9c;
+    color: #FFF;
+}
+
+/* primary - single */
+
+
+/* primary - archive */
+
+/* archive - ページネーション */
+.archive .pagination {
+    margin: 30px 0;
+}
+
+.archive .pagination .screen-reader-text {
+    display: none;
+}
+
+/* sidebar */
+.sidebar {
+    font-size: .9em;
+    background-color: #EEE;
+    padding: 20px;
+}
+@media screen and (min-width: 768px) {
+    .sidebar {
+        margin-bottom: 0;
+    }
+}
+
+.sidebar-block {
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.sidebar-block h3 {
+    color: #3b3015;
+    margin-bottom: .5em;
+}
+
+.sidebar-block ul {
+    padding-left: 1.2em;
+}
+
+.sidebar-block li {
+    margin-bottom: 1em;
+}
+
+.sidebar-block li:last-child {
+    border-bottom-width: 0;
+}
+
+/* footer */
+.page-footer {
+    background: #252525;
+    padding: 30px 0;
+    font-size: 0.8em;
+}
+
+.page-footer .container {
+    padding: 0 30px;
+}
+@media screen and (min-width: 768px) {
+    .page-footer .container {
+        padding: 0;
+    }
+}
+
+.footer-nav li {
+    display: block;
+    margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+    .footer-nav li {
+        display: inline-block;
+        margin: 0 20px 10px 0;
+    }
+}
+
+
+
+
+
+

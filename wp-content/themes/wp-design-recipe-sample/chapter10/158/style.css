@@ -1,0 +1,609 @@
+/*
+Theme Name: 158 カスタムメニューをヘッダーに設置したい
+Theme URI: https://studio947.net
+Author: Sukeharu Kano
+Author URI: https://studio947.net
+Description: 158
+Version: 1.0
+*/
+@charset "UTF-8";
+
+/* reset */
+html {
+    font-size: 16px;
+}
+
+html *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #F5F5F5;
+    color: #444;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #567CF7;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #517aff;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* container */
+.container {
+    margin: 0 8px;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+@media screen and (min-width: 1018px) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+/* header */
+.main-header {
+    padding: 15px 0;
+    border-bottom: 5px solid #B29330;
+    background: #EFEF75;
+}
+@media screen and (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo-img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.catchcopy {
+    text-align: center;
+    font-size: 0.9rem;
+}
+@media screen and (min-width: 768px) {
+    .catchcopy {
+        margin: 0;
+        text-align: right;
+    }
+}
+
+
+/* 検索フォーム 作業中、未使用 */
+.input-group {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 80px;
+    border-radius: 18px;
+    padding: 5px 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3) inset;
+    width: 200px;
+    background-color: #FFF;
+}
+@media screen and (min-width: 768px) {
+    .input-group {
+        width: 350px;
+    }
+}
+
+.form-control {
+    padding: 0 0 0 10px;
+    line-height: 24px;
+    border-width: 0;
+    width: 150px;
+}
+@media screen and (min-width: 768px) {
+    .form-control {
+        width: 300px;
+    }
+}
+
+.form-control:focus {
+    outline: none;
+}
+
+#searchform .btn {
+    line-height: 24px;
+    border-width: 0;
+    color: #072650;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#searchform .btn span {
+    display: none;
+}
+
+/* ナビゲーション */
+.container.navigation {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+}
+
+.main-nav {
+    margin: 0 auto;
+    max-width: 1000px;
+    background: #FFF;
+}
+@media screen and (min-width: 768px) {
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        background: transparent;
+    }
+}
+
+.main-header {
+    position: relative;
+}
+
+.main-nav-open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #00629a;
+    color: #FFF;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .main-nav-open {
+        display: none;
+    }
+}
+
+.main-nav {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    z-index: 10;
+}
+@media screen and (min-width: 768px) {
+    .main-nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        left: auto;
+        top: auto;
+    }
+    .main-nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+    }
+    .main-nav ul li {
+        display: block;
+        margin-left: 50px;
+    }
+}
+
+.main-nav.close {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .main-nav.close {
+        display: block !important;
+    }
+}
+
+.main-nav li a {
+    display: block;
+    padding: 8px 20px;
+    border-bottom: 1px solid #F2F2F2;
+    font-size: .9em;
+    color: #153ab2;
+}
+@media screen and (min-width: 768px) {
+    .main-nav li a {
+        line-height: 2;
+        display: block;
+        border-bottom: none;
+        padding: 5px 0 0;
+    }
+    .main-nav li a:hover {
+        color: #517aff;
+    }
+}
+
+/* primary */
+/* primary - front page */
+.main h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.main h2 i {
+    margin-right: 8px;
+}
+
+.front-page .feature {
+    margin: 20px 0 50px;
+}
+@media screen and (min-width: 768px) {
+    .front-page .feature {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width: 980px) {
+    .front-page .feature {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.front-page .feature-item {
+    margin-top: 8px;
+    border: 1px solid #EEE;
+    background-color: #FFF;
+    border-radius: 3px;
+    overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+    .front-page .feature-item {
+        width: 49%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        flex: 1 1 49%;
+    }
+}
+@media screen and (min-width: 980px) {
+    .front-page .feature-item {
+        width: 24%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        flex: 1 1 24%;
+    }
+}
+
+.front-page .feature-figure {
+    margin: 0 auto;
+    width: 100%;
+}
+@media screen and (min-width: 980px) {
+    .front-page .feature-figure {
+        width: 100%;
+    }
+}
+
+.front-page .feature-txt {
+    text-align: center;
+    padding: 12px;
+}
+
+.front-page .feature-txt h3 {
+    font-size: 1em;
+    margin: 0 0 10px;
+}
+
+.front-page .feature-txt .price {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #517aff;
+    color: #FFF;
+    border-radius: 3px;
+    margin: 0 0 10px;
+}
+
+.front-page .feature-txt p {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+
+.news {
+    margin-bottom: 50px;
+}
+
+.news ul {
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+    background-color: #FFF;
+    border: 1px solid #EEE;
+}
+@media screen and (min-width: 768px) {
+    .news ul {
+        padding: 50px;
+    }
+}
+
+.news li {
+    padding: 20px 0;
+    border-top: 1px dashed #EEE;
+}
+
+.news li:first-child {
+    padding-top: 0;
+    border-top-width: 0;
+}
+
+.news li:last-child {
+    padding-bottom: 0;
+}
+
+.news-date {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+    color: #00b8f4;
+}
+
+/* primary - single, archive */
+.breadcrumb {
+    margin-top: 30px;
+    font-size: .8em;
+    background-color: #E2E2E2;
+    padding: .5em 1em;
+    border-radius: 3px;
+}
+
+.archive-loop {
+    margin: 30px 0;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 3px;
+}
+@media screen and (min-width: 768px) {
+    .archive-loop {
+        padding: 30px;
+    }
+}
+
+.content-header {
+    padding-top: 30px;
+    border-top: 1px solid #DDD;
+    margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+    .content-header {
+        margin-top: 60px;
+    }
+}
+
+.content-header:first-child {
+    padding-top: 0;
+    border-top-width: 0;
+    margin-top: 0;
+}
+
+.title-block {
+    margin-top: 1rem;
+}
+
+.title-block h1 {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.title-block .pubdate {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+}
+
+.title-block .tag {
+    font-size: 0.7em;
+    margin: .5em 0;
+}
+
+.title-block .tag > span {
+    background-color: #153ab2;
+    color: #FFF;
+    display: inline-block;
+    line-height: 1.8;
+    padding: 0 8px;
+    margin: 0 5px 5px 0;
+    border-radius: 3px;
+}
+
+@media screen and (min-width: 768px) {
+    .single .primary .container,
+    .archive .primary .container {
+        display: flex;
+    }
+    .single .primary main,
+    .archive .primary main {
+        flex: 1 1 auto;
+        margin-right: 1em;
+    }
+    .primary .sidebar {
+        flex: 0 0 22.5rem;
+    }
+}
+
+
+.nav-links {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #DDD;
+    margin-top: 50px;
+}
+
+.page-numbers {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 3px;
+    background-color: #F2F2F2;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+
+a.page-numbers:hover {
+    background-color: #517aff;
+    color: #FFF;
+}
+
+.page-numbers.current {
+    background-color: #517aff;
+    color: #FFF;
+}
+
+
+.content-wrapper {
+    border-radius: 3px;
+    background-color: #FFF;
+    padding: 20px;
+    margin: 30px 0;
+    position: relative;
+}
+@media screen and (min-width: 768px) {
+    .content-wrapper {
+        padding: 30px;
+    }
+}
+
+.content {
+    margin-top: 30px;
+}
+
+.content .photo {
+    margin-bottom: 30px;
+}
+
+.content-wrapper .city {
+    border-top-width: 0;
+}
+
+.content-wrapper .info {
+    border-bottom: 1px dashed #DDD;
+    padding-bottom: 1em;
+}
+
+/* ページネーション */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.pagination span {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .pagination span {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
+.pagination > div {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 3px;
+    background-color: #FFF;
+}
+@media screen and (min-width: 768px) {
+    .pagination > div {
+        display: block;
+        width: auto;
+        height: auto;0
+        margin: 0;
+        background-color: transparent;
+    }
+}
+
+/* sidebar */
+.sidebar {
+    font-size: .9em;
+    background-color: #EEE;
+    padding: 20px;
+}
+@media screen and (min-width: 768px) {
+    .sidebar {
+        margin-bottom: 0;
+    }
+}
+
+.sidebar-block {
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.sidebar-block h3 {
+    color: #3b3015;
+    margin-bottom: .5em;
+}
+
+.sidebar-block ul {
+    padding-left: 1.2em;
+}
+
+.sidebar-block li {
+    margin-bottom: 1em;
+}
+
+.sidebar-block li:last-child {
+    border-bottom-width: 0;
+}
+
+/* footer */
+.page-footer {
+    background: #EFEF75;
+    padding: 30px 0;
+    font-size: 0.8em;
+}
+
+.page-footer .container {
+    padding: 0 30px;
+}
+@media screen and (min-width: 768px) {
+    .page-footer .container {
+        padding: 0;
+    }
+}
+
+.footer-nav li {
+    display: block;
+    margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+    .footer-nav li {
+        display: inline-block;
+        margin: 0 20px 10px 0;
+    }
+}
